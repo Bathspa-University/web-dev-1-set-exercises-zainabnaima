@@ -31,12 +31,17 @@
 
         th, td {
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 2px solid #ccc;
             text-align: left;
         }
 
         th {
             background-color: #f5f5f5;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background-color: #f0f8ff;
         }
     </style>
 </head>
@@ -51,48 +56,63 @@
                 <th>HTML Tags</th>
                 <th>Description</th>
                 <th>Example</th>
+                <th>Usage</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>&lt;h1&gt;</td>
-                <td>Heading Level 1</td>
-                <td><code>&lt;h1&gt;Welcome to My Website&lt;/h1&gt;</code></td>
+                <td>&lt;html&gt;</td>
+                <td>Defines the root of an HTML document.</td>
+                <td>&lt;!DOCTYPE html&gt;</td>
+                <td class="highlight">Page Titles</td>
+            </tr>
+            <tr>
+                <td>&lt;head&gt;</td>
+                <td>Contains information about the HTML document.</td>
+                <td>&lt;head&gt;&lt;/head&gt;</td>
+                <td class="highlight">Metadata</td>
+            </tr>
+            <tr>
+                <td>&lt;body&gt;</td>
+                <td>Contains the content of the HTML document.</td>
+                <td>&lt;body&gt;&lt;/body&gt;</td>
+                <td class="highlight">Page content</td>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt; to &lt;h6&gt;</td>
+                <td>Heading Levels 1 to 6, with h1 being the most important.</td>
+                <td>&lt;h1&gt;Welcome to My Website&lt;/h1&gt;</td>
+                <td class="highlight">Headers</td>
             </tr>
             <tr>
                 <td>&lt;p&gt;</td>
-                <td>Paragraph</td>
-                <td><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></td>
-            </tr>
-            <tr>
-                <td>&lt;ul&gt;</td>
-                <td>Unordered List</td>
-                <td><code>&lt;ul&gt;<br>  &lt;li&gt;Item 1&lt;/li&gt;<br>  &lt;li&gt;Item 2&lt;/li&gt;<br>  &lt;li&gt;Item 3&lt;/li&gt;<br>&lt;/ul&gt;</code></td>
-            </tr>
-            <tr>
-                <td>&lt;ol&gt;</td>
-                <td>Ordered List</td>
-                <td><code>&lt;ol&gt;<br>  &lt;li&gt;First item&lt;/li&gt;<br>  &lt;li&gt;Second item&lt;/li&gt;<br>  &lt;li&gt;Third item&lt;/li&gt;<br>&lt;/ol&gt;</code></td>
+                <td>Defines a paragraph.</td>
+                <td>&lt;p&gt;This is a paragraph.&lt;/p&gt;</td>
+                <td class="highlight">Text content</td>
             </tr>
             <tr>
                 <td>&lt;a&gt;</td>
-                <td>Anchor (Link)</td>
-                <td><code>&lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;</code></td>
+                <td>Defines a hyperlink.</td>
+                <td>&lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;</td>
+                <td class="highlight">Links</td>
             </tr>
             <tr>
                 <td>&lt;img&gt;</td>
-                <td>Image</td>
-                <td><code>&lt;img src="image.jpg" alt="Description of image"&gt;</code></td>
+                <td>Defines an image.</td>
+                <td>&lt;img src="image.jpg" alt="Description of image"&gt;</td>
+                <td class="highlight">Images</td>
             </tr>
             <tr>
                 <td>&lt;div&gt;</td>
-                <td>Division</td>
-                <td><code>&lt;div&gt;<br>  &lt;!-- Other HTML elements here --&gt;<br>&lt;/div&gt;</code></td>
+                <td>Defines a division.</td>
+                <td>&lt;div&gt;&lt;/div&gt;</td>
+                <td class="highlight">Layout</td>
             </tr>
             <tr>
                 <td>&lt;span&gt;</td>
-                <td>Span</td>
-                <td><code>&lt;p&gt;This is &lt;span&gt;highlighted&lt;/span&gt; text.&lt;/p&gt;</code></td>
+                <td>Defines a span.</td>
+                <td>&lt;p&gt;This is &lt;span&gt;highlighted&lt;/span&gt; text.&lt;/p&gt;</td>
+                <td class="highlight">Text styling</td>
             </tr>
         </tbody>
     </table>
@@ -103,48 +123,57 @@
                 <th>CSS Properties</th>
                 <th>Description</th>
                 <th>Example</th>
+                <th>Usage</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>color</td>
-                <td>Text Color</td>
+                <td>Sets the color of text.</td>
                 <td><code>p { color: blue; }</code></td>
+                <td class="highlight">Text styling</td>
             </tr>
             <tr>
                 <td>font-size</td>
-                <td>Font Size</td>
+                <td>Sets the font size.</td>
                 <td><code>h1 { font-size: 24px; }</code></td>
+                <td class="highlight">Text styling</td>
             </tr>
             <tr>
                 <td>background-color</td>
-                <td>Background Color</td>
+                <td>Sets the background color.</td>
                 <td><code>body { background-color: #f0f0f0; }</code></td>
+                <td class="highlight">Layout</td>
             </tr>
             <tr>
                 <td>padding</td>
-                <td>Padding</td>
+                <td>Sets the padding around an element.</td>
                 <td><code>div { padding: 10px; }</code></td>
+                <td class="highlight">Layout</td>
             </tr>
             <tr>
                 <td>margin</td>
-                <td>Margin</td>
+                <td>Sets the margin around an element.</td>
                 <td><code>p { margin: 20px; }</code></td>
+                <td class="highlight">Layout</td>
             </tr>
             <tr>
                 <td>text-align</td>
-                <td>Text Alignment</td>
+                <td>Sets the horizontal alignment of text.</td>
                 <td><code>h1 { text-align: center; }</code></td>
+                <td class="highlight">Text styling</td>
             </tr>
             <tr>
                 <td>border</td>
-                <td>Border</td>
+                <td>Sets the border around an element.</td>
                 <td><code>div { border: 1px solid black; }</code></td>
+                <td class="highlight">Layout</td>
             </tr>
             <tr>
                 <td>font-family</td>
-                <td>Font Family</td>
+                <td>Sets the font family.</td>
                 <td><code>body { font-family: Arial, sans-serif; }</code></td>
+                <td class="highlight">Text styling</td>
             </tr>
         </tbody>
     </table>
