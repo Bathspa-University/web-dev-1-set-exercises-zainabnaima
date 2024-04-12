@@ -11,7 +11,17 @@ header {
   background-color: #e8ddbd; /* Sunlight */
   color: #6b3174; /* Rapunzel's dress */
 }
-
+nav {
+  background-color: #e8ddbd; /* Sunlight */
+  padding: 10px 0;
+  text-align: center;
+}
+nav a {
+  color: #6b3174; /* Rapunzel's dress */
+  text-decoration: underline;
+  margin: 0 15px;
+  font-size: 18px;
+}
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
