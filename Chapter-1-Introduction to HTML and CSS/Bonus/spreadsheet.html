@@ -18,8 +18,8 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #63d32f22;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.451);
         }
 
         /* Table styles */
@@ -31,17 +31,27 @@
 
         th, td {
             padding: 10px;
-            border: 2px solid #ccc;
+            border: 2px solid #00000030;
             text-align: left;
         }
 
         th {
-            background-color: #f5f5f5;
+            background-color: #233f1f;
             font-weight: bold;
+            color:#fffffff7
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
         }
 
         .highlight {
-            background-color: #f0f8ff;
+            background-color: #084c01ae;
+            color:#ffffff
+        }
+
+        p {
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -49,6 +59,8 @@
 
 <div class="container">
     <h1>HTML & CSS Quick-Reference Guide</h1>
+    <h2>HTML</h2>
+    <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages. It defines the structure and content of a webpage using various elements and tags.</p>
     
     <table>
         <thead>
@@ -116,6 +128,10 @@
             </tr>
         </tbody>
     </table>
+
+    <h2>CSS</h2>
+    <p>CSS (Cascading Style Sheets) is used to style HTML documents. It defines how HTML elements should be displayed on the screen, including their layout, colors, fonts, and more.</p>
+        
     
     <table>
         <thead>
