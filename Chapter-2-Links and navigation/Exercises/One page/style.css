@@ -38,8 +38,8 @@ h2{
 }
 section p br {
   display: block;
-  content: ""; /* Add this line to make the br element visible */
-  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+  content: ""; 
+  margin-bottom: 20px; 
 }
 footer {
   text-align: center;
