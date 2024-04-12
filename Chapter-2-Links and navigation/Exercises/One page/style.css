@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7e9cb; /* Rapunzel's hair */
+  color: #6b3174; /* Rapunzel's dress */
+  overflow-x: hidden;
+}
+header {
+  text-align: center;
+  padding: 1px;
+  background-color: #e8ddbd; /* Sunlight */
+  color: #6b3174; /* Rapunzel's dress */
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+h1 p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+section {
+  padding: 50px 20px;
+  background-color: #fff; /* Rapunzel's dress */
+}
+h2{
+  background-color: #3e983e3e; /* Forest */
+  letter-spacing: 1.2px;
+  margin-top: -40px;
+  margin-bottom: 0.1px;
+}
+section p br {
+  display: block;
+  content: ""; /* Add this line to make the br element visible */
+  margin-bottom: 20px; /* Adjust the margin-bottom value as needed */
+}
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #6b3174; /* Rapunzel's dress */
+  color: #fff;
+}
+.text {
+  font-size: 0.9em;
+  color: #b10052;
+  line-height: 0.1;
+}
+.scroll {
+  overflow-y:auto;
+}
+.card {
+  display: inline-block;
+  width: 300px;
+  margin: 0 20px;
+  vertical-align: top;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 35px;
+}
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.button{
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #a945b8; /* Rapunzel's hair */
+  color: #ffffff; /* Rapunzel's dress */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: underline;
+}
+.button:hover{
+  background-color: #6b3174;
+}
