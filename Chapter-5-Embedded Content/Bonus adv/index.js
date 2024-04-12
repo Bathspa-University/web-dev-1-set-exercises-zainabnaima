@@ -1,83 +1,42 @@
-// Function to convert text to speech
-function convertToSpeech() {
-    const text = document.getElementById('text-to-speech-input').value;
+document.addEventListener("DOMContentLoaded", function() {
+    const soundboard = document.querySelector(".soundboard");
 
-    // Create speech synthesis request
-    const utterance = new SpeechSynthesisUtterance();
-    utterance.text = text;
-    
-    // Speak the text
-    window.speechSynthesis.speak(utterance);
-}
+    // Function to convert text to speech
+    function convertToSpeech() {
+        const text = document.getElementById('text-to-speech-input').value;
+        const utterance = new SpeechSynthesisUtterance();
+        utterance.text = text;
+        window.speechSynthesis.speak(utterance);
+    }
 
-// Event listener for the text-to-speech button
-document.getElementById('text-to-speech-button').addEventListener('click', convertToSpeech);
+    // Event listener for the text-to-speech button
+    document.getElementById('text-to-speech-button').addEventListener('click', convertToSpeech);
 
-// Array of audio samples
-const audioSamples = [
-    { title: 'Sample 1', duration: 30 },
-    { title: 'Sample 2', duration: 45 },
-    // Add more audio samples here
-];
+    // Array of sample names and corresponding audio files
+    const samples = [
+        { name: "Ah-Ha", audio: "Audio/ah-ha.mp3" },
+        { name: "Dan", audio: "Audio/dan.mp3" },
+        { name: "Back of the net", audio: "Audio/back-of-the-net.mp3" },
+        { name: "Bang out of order", audio: "Audio/bangoutoforder.mp3" },
+        { name: "email of the evening", audio: "Audio/emailoftheevening.mp3" },
+        { name: "I ate a scotch egg", audio: "Audio/iateascotchegg.mp3" },
+        { name: "Im confused", audio: "Audio/imconfused.mp3" },
+        { name: "Hello Patridge", audio: "Audio/hellopartridge.mp3" },
+    ];
 
-// Constants for pagination
-const samplesPerPage = 9;
-let currentPage = 1;
+    // Function to play audio
+    function playAudio(audioSrc) {
+        const audio = new Audio(audioSrc);
+        audio.play();
+    }
 
-// Function to display audio samples for the current page
-function displaySamples() {
-    const startIndex = (currentPage - 1) * samplesPerPage;
-    const endIndex = startIndex + samplesPerPage;
-    const samplesToShow = audioSamples.slice(startIndex, endIndex);
-
-    const soundboard = document.querySelector('.soundboard');
-    soundboard.innerHTML = '';
-
-    samplesToShow.forEach(sample => {
-        const button = document.createElement('button');
-        button.classList.add('sample-button');
-        button.textContent = sample.title + ' (' + sample.duration + 's)';
+    samples.forEach(sample => {
+        const button = document.createElement("button");
+        button.textContent = sample.name;
+        button.classList.add("sample-button");
+        button.addEventListener("click", () => {
+            playAudio(sample.audio);
+        });
         soundboard.appendChild(button);
     });
-
-    updatePaginationButtons();
-}
-
-// Function to update pagination buttons
-function updatePaginationButtons() {
-    const prevButton = document.getElementById('prev-page');
-    const nextButton = document.getElementById('next-page');
-
-    if (currentPage === 1) {
-        prevButton.disabled = true;
-    } else {
-        prevButton.disabled = false;
-    }
-
-    const totalPages = Math.ceil(audioSamples.length / samplesPerPage);
-    if (currentPage === totalPages) {
-        nextButton.disabled = true;
-    } else {
-        nextButton.disabled = false;
-    }
-}
-
-// Event listener for pagination buttons
-document.getElementById('prev-page').addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--;
-        displaySamples();
-    }
 });
-
-document.getElementById('next-page').addEventListener('click', () => {
-    const totalPages = Math.ceil(audioSamples.length / samplesPerPage);
-    if (currentPage < totalPages) {
-        currentPage++;
-        displaySamples();
-    }
-});
-
-// Initial display of samples
-displaySamples();
-
